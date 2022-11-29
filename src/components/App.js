@@ -2,24 +2,16 @@ import React from 'react'
 import '../styles/App.css';
 const App = () => {
 
-  const handleInput = (event) => {
+  const handleClick = (event) => {
     // use console.log
-    //  console.log(event.target.value);
-    console.log(`Input in #${event.target.id} is ${event.target.value}`);
+    console.log(`Button id is:-${event.target.id}`);
   }
 
-  // do not change id of input elements
+  // do not remove the two buttons or change their id
   return (
     <div id="main">
-      <label htmlFor='text-input'>Text Input:- </label>
-      <input id="text-input" type={'text'} onChange={handleInput} />
-
-      <br />
-      <br />
-
-      <label htmlFor='num-input'>Number input</label>
-      <input id="num-input" type={'number'} onChange={handleInput} />
-      <br />
+      <button id="button-a" onClick={handleClick}>Button A</button>
+      <button id="button-b" onClick={handleClick}>Button B</button>
     </div>
   )
 }
